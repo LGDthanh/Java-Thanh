@@ -1,0 +1,46 @@
+setter đe public
+getter de priv
+
+
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int age;
+    private static int id;
+
+    // public Student(String name, String id, int age) {
+    // this.name = name;
+    // this.id = id;
+    // this.age = age;
+    // }
+
+    // constructor
+
+    public Student() {
+        id++;
+    }
+
+    // setter
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String toString() {
+        return name + " " + id + " " + age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student thanh = new Student();
+        thanh.setName("thanh");
+        thanh.setAge(24);
+
+        System.out.println(thanh.toString());
+    }
+}
